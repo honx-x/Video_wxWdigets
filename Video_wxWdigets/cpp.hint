@@ -1,0 +1,5 @@
+// 힌트 파일은 Visual Studio IDE에서 함수 및 매크로 이름과 같은 Visual C++ 식별자를
+// 해석하는 데 도움이 됩니다.
+// 자세한 내용은 다음을 참조하세요. https://go.microsoft.com/fwlink/?linkid=865984
+#define wxBEGIN_EVENT_TABLE(theClass, baseClass) const wxEventTable theClass::sm_eventTable = { &baseClass::sm_eventTable, &theClass::sm_eventTableEntries[0] }; const wxEventTable *theClass::GetEventTable() const { return &theClass::sm_eventTable; } wxEventHashTable theClass::sm_eventHashTable(theClass::sm_eventTable); wxEventHashTable &theClass::GetEventHashTable() const { return theClass::sm_eventHashTable; } const wxEventTableEntry theClass::sm_eventTableEntries[] = {
+#define wxUSE_LISTCTRL
